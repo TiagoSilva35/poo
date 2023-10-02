@@ -31,8 +31,8 @@ public class Exercicio1 {
                     break;
                 }
             }
-            //Special case
-            if (!foundMAtch) {
+            
+            if (!foundMAtch) {      //Special case
                 quantidadePorPais[quantidadePorPais.length - 1]++;
             }
        }
@@ -56,7 +56,7 @@ public class Exercicio1 {
             "https://www.btu.de/",
             "https://www.dei.uc.pt/poao/exames",
             "http://www.eth.ch/index.html",
-            "http://www.osu.edu/"
+            "http://www.osu.edu/",
             };
         String paises[][] = {
             {"pt", "Portugal"},
