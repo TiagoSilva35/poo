@@ -6,7 +6,7 @@ public class Exercicio1 {
             if (quantidades[i] != 0 && !paisesVisitados[i]){        //If the country is yet to visit and there's something to print
                 paisesVisitados[i] = true;
                 for (int j = 0; j < paisesVisitados.length; j++) {      //Loops through the visited array checking for the duplicates
-                    if (paises[i][1].compareTo(paises[j][1]) == 0 && i != j){
+                    if (paises[i][1].compareToIgnoreCase(paises[j][1]) == 0 && i != j){
                         quantidades[i]++;
                         paisesVisitados[j] = true;
                     }
@@ -25,7 +25,7 @@ public class Exercicio1 {
         for (String key : keys) {
             foundMAtch = false;
             for (int row = 0; row < paises.length; row++){      //find the matching country
-                if (key.compareTo(paises[row][0]) == 0){
+                if (key.compareToIgnoreCase(paises[row][0]) == 0){
                     foundMAtch = true;
                     quantidadePorPais[row]++;
                     break;
@@ -39,17 +39,17 @@ public class Exercicio1 {
        return quantidadePorPais;
     }
     //Cleans the urls. Extracts the keys
-    private static String[] limpaURL(String[] URLs){
-        String[] cleaStrings = new String[URLs.length];
+    private static String[] limpaURL(String[] urls){
+        String[] cleaStrings = new String[urls.length];
         int counter = 0;
-        for (String url : URLs){
+        for (String url : urls){
             String[] tempData = url.split("/")[2].split("\\.");
             cleaStrings[counter++] = tempData[tempData.length - 1];
         }
         return cleaStrings;
     }
     public static void main(String[] args) {
-        String URLs[] = {
+        String urls[] = {
             "https://www.dei.uc.pt/poao/exames",
             "http://www.scs.org/index.html",
             "https://www.nato.int/events",
@@ -57,6 +57,8 @@ public class Exercicio1 {
             "https://www.dei.uc.pt/poao/exames",
             "http://www.eth.ch/index.html",
             "http://www.osu.edu/",
+            "https://www.dei.uc.es/poao/exames",
+            "https://www.dei.uc.ez/poao/exames"
         };
         String paises[][] = {
             {"pt", "Portugal"},
@@ -64,9 +66,11 @@ public class Exercicio1 {
             {"fr", "França"},
             {"uk", "Reino Unido"},
             {"de", "Alemanha"},
-            {"edu", "EUA"}
+            {"edu", "EUA"},
+            {"es", "Espanha"},
+            {"ez", "PorTugaL"}
         };
-        String[] keys = limpaURL(URLs);
+        String[] keys = limpaURL(urls);
         int[] quantidadePorPais = contaPaises(keys, paises);
         imprimeResultado(quantidadePorPais, paises);
     }
