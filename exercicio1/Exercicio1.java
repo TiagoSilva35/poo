@@ -57,7 +57,7 @@ public class Exercicio1 {
             "https://www.dei.uc.pt/poao/exames",
             "http://www.eth.ch/index.html",
             "http://www.osu.edu/",
-            };
+        };
         String paises[][] = {
             {"pt", "Portugal"},
             {"org", "EUA"},
@@ -65,7 +65,7 @@ public class Exercicio1 {
             {"uk", "Reino Unido"},
             {"de", "Alemanha"},
             {"edu", "EUA"}
-            };
+        };
         String[] keys = limpaURL(URLs);
         int[] quantidadePorPais = contaPaises(keys, paises);
         imprimeResultado(quantidadePorPais, paises);
