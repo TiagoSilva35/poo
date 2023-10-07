@@ -20,19 +20,19 @@ public class Exercicio1 {
     } 
     //Matches each key from the urls to the country
     private static int[] contaPaises(String[] keys, String paises[][]){
-        boolean foundMAtch = false;
+        boolean foundMatch = false;
         int[] quantidadePorPais = new int[paises.length + 1];
         for (String key : keys) {
-            foundMAtch = false;
+            foundMatch = false;
             for (int row = 0; row < paises.length; row++){      //find the matching country
                 if (key.compareToIgnoreCase(paises[row][0]) == 0){
-                    foundMAtch = true;
+                    foundMatch = true;
                     quantidadePorPais[row]++;
                     break;
                 }
             }
             
-            if (!foundMAtch) {      //Special case
+            if (!foundMatch) {      //Special case
                 quantidadePorPais[quantidadePorPais.length - 1]++;
             }
        }
@@ -49,7 +49,7 @@ public class Exercicio1 {
         return cleaStrings;
     }
     public static void main(String[] args) {
-        String urls[] = {
+        String[] urls = {
             "https://www.dei.uc.pt/poao/exames",
             "http://www.scs.org/index.html",
             "https://www.nato.int/events",
@@ -58,9 +58,11 @@ public class Exercicio1 {
             "http://www.eth.ch/index.html",
             "http://www.osu.edu/",
             "https://www.dei.uc.es/poao/exames",
-            "https://www.dei.uc.ez/poao/exames"
+            "https://www.dei.uc.ez/poao/exames",
+            "http://random.pt"
         };
-        String paises[][] = {
+        String[][] paises = {
+            
             {"pt", "Portugal"},
             {"org", "EUA"},
             {"fr", "França"},
@@ -68,7 +70,7 @@ public class Exercicio1 {
             {"de", "Alemanha"},
             {"edu", "EUA"},
             {"es", "Espanha"},
-            {"ez", "PorTugaL"}
+            {"ez", "PortugaL"}
         };
         String[] keys = limpaURL(urls);
         int[] quantidadePorPais = contaPaises(keys, paises);
