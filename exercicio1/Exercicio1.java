@@ -11,11 +11,11 @@ public class Exercicio1 {
                         paisesVisitados[j] = true;
                     }
                 }
-                System.out.printf("%s : %d\n", paises[i][1], quantidades[i]);
+                System.out.printf("%s: %d\n", paises[i][1], quantidades[i]);
             }
         } 
         if (quantidades[quantidades.length - 1] != 0){      //Special case
-            System.out.printf("Outro(s) : %d\n", quantidades[quantidades.length - 1]);        
+            System.out.printf("Outro(s): %d\n", quantidades[quantidades.length - 1]);        
         }
     } 
     //Matches each key from the urls to the country
@@ -57,9 +57,6 @@ public class Exercicio1 {
             "https://www.dei.uc.pt/poao/exames",
             "http://www.eth.ch/index.html",
             "http://www.osu.edu/",
-            "https://www.dei.uc.es/poao/exames",
-            "https://www.dei.uc.ez/poao/exames",
-            "http://random.pt"
         };
         String[][] paises = {
             
@@ -69,8 +66,6 @@ public class Exercicio1 {
             {"uk", "Reino Unido"},
             {"de", "Alemanha"},
             {"edu", "EUA"},
-            {"es", "Espanha"},
-            {"ez", "PortugaL"}
         };
         String[] keys = limpaURL(urls);
         int[] quantidadePorPais = contaPaises(keys, paises);
