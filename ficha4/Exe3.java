@@ -24,23 +24,23 @@ class Disciplina{
     }
     public String toString(){
         String txt = "";
-        txt += nome + "- Avaliação do aluno nº " + numeroAluno + "\n";
-        txt += "Época Normal: " + NotaNormal + "valores" + "\n";
-        txt += "Época Recurso: " + NotaRecurso + "valores" + "\n";
-        txt += "Época Especial: " + NotaEspecial + "valores" + "\n";
-        txt += "Melhor Nota: " + melhorNota() + "valores" + "\n";
-
-
+        txt += nome + " - Avaliação do aluno nº " + numeroAluno + "\n";
+        txt += "Época Normal: " + NotaNormal + " valores" + "\n";
+        txt += "Época Recurso: " + NotaRecurso + " valores" + "\n";
+        txt += "Época Especial: " + NotaEspecial + " valores" + "\n";
+        txt += "Melhor Nota: " + melhorNota() + " valores" + "\n";
+        return txt;
     }
-
-
-
-    
-
 }
 
 public class Exe3 {
     public static void main(String[] args) {
-        
+        String nome = "AM3";
+        int numeroAluno = 1234;
+        Disciplina novaDisciplina = new Disciplina(nome, numeroAluno);
+        novaDisciplina.setNotaNormal(16);
+        novaDisciplina.setNotaRecurso(17);
+        novaDisciplina.setNotaEspecial(15);
+        System.out.println(novaDisciplina.toString());
     }
 }
