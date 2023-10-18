@@ -46,9 +46,9 @@ class Angulo{
 
 public class Exe2 {
    public static void main(String[] args) {
-      /*Angulo angulo1 = new Angulo(18);
-      Angulo angulo2 = new Angulo(180);
-      String output_angulo1 = angulo1.toString();
+      Angulo angulo1 = new Angulo(0);
+      Angulo angulo2 = new Angulo(Math.PI/4);
+      /*String output_angulo1 = angulo1.toString();
       String output_angulo2 = angulo2.toString();
       System.out.println(output_angulo1);
       System.out.println(output_angulo2);
@@ -58,9 +58,30 @@ public class Exe2 {
       String outputDif = dif.toString();
       System.out.println(outputSum);
       System.out.println(outputDif);
-      System.out.println(angulo2.radianos());
+      System.out.println(angulo2.radianos());*/
       boolean flag = angulo2.equals(angulo1);
-      System.out.println(flag ? "YES" : "NO");*/
-      
-   } 
+      System.out.println("Os Ângulos são iguais? " + (flag ? "Sim" : "Não"));
+      Angulo sum = angulo1.add(angulo2);
+      if (sum.sin() == sum.cos()){
+         if (sum.sin() == sum.tan()){
+            System.out.println("Sin, cos e tan do ângulo soma são iguais");
+            return;
+         }
+         else{
+            System.out.println("Sin e cos iguais, tangente diferente");
+            return;
+         }
+      }
+      else{
+         if (sum.sin() == sum.tan()){
+            System.out.println("Sin e tan iguais");
+            return;
+         }
+         else if (sum.cos() == sum.tan()){
+            System.out.println("Cos e tan iguais");
+            return; 
+         }
+      }
+      System.out.println("Sin, cos e tan diferentes");
+   }
 }
