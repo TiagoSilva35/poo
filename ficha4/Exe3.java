@@ -41,6 +41,6 @@ public class Exe3 {
         novaDisciplina.setNotaNormal(16);
         novaDisciplina.setNotaRecurso(17);
         novaDisciplina.setNotaEspecial(15);
-        System.out.println(novaDisciplina.toString());
+        System.out.println(novaDisciplina);
     }
 }
