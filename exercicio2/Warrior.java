@@ -1,15 +1,33 @@
-class Warrior extends Character{
-    private boolean hasArmour;
-    private String ShortRangegun;
+enum shortRangeGun{ //types of short range guns
+    KNIFE,
+    AXE,
+    SWORD
+}
 
-    public Warrior(String name, int strength, int inteligence, int agility, boolean hasArmour, String gun){
-        super(name, strength, inteligence, agility);
+class Warrior extends Character{
+    private boolean hasArmour;  //it either has armour or not
+    private shortRangeGun gun;  //Each warrior has only one gun
+
+    public Warrior(String name, boolean hasArmour, shortRangeGun gun){
+        super(name, 10, 3, 5);
         this.hasArmour = hasArmour;
-        this.ShortRangegun = gun;
+        this.gun = gun;
     }
-    public String getGun(){return this.ShortRangegun;}    
+    public shortRangeGun getGun(){return this.gun;}    
     public boolean getArmour(){return this.hasArmour;}
     public void setArmour(boolean armour){hasArmour = armour;}
-    public void setGun(String gun){this.ShortRangegun = gun;}
+    public void setGun(shortRangeGun gun){this.gun = gun;}
+
+    protected boolean hasAtribute(){return hasArmour;}
+
+    public void levelUp(){
+        printStats("Before levelling up");
+        System.out.println();   //used to format the output
+        this.strength *= 1.2;
+        this.agility *= 1.1;
+        this.inteligence *= 1.05;
+        this.experience++;
+        printStats("After levelling up");
+    }
     
 }
