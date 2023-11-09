@@ -1,73 +1,125 @@
 import java.lang.Math;
 
-//superclass character
-class Character{
+/**
+ * @author Tiago Silva
+ * @version 1.0
+ */
+abstract class Character{
+    /**
+     * the character's name
+     */
     protected String name;
+    /**
+     * the character's lvl of xp
+     */
     protected int experience;
-    protected double strength, inteligence, agility;
+    /**
+     * the character's strength, intelligence and agility perks
+     */
+    protected double strength, intelligence, agility;
 
-    public Character(String name, int strength, int inteligence, int agility){
+    /**
+     * Constructor of the Character's class
+     * @param name character's name
+     * @param strength character's strength
+     * @param intelligence character's intelligence
+     * @param agility character's agility
+     */
+    public Character(String name, double strength, double intelligence, double agility){
         this.name = name;
         this.experience = (int)(Math.random() * 25) + 1;
         this.strength = strength;
-        this.inteligence = inteligence;
+        this.intelligence = intelligence;
         this.agility = agility;
     }
-    
-    
-    /** 
-     * @param state
-     * @return String
+
+
+    /**
+     * Gets the Character's name
+     * @return a String, the Character's name
      */
-    //getters and setters
     public String getName(){return name;}
 
+    /**
+     * Gets the level of experience
+     * @return an integer, the lvl of xp
+     */
     public int getExperience(){return experience;}
 
+    /**
+     * Gets the strength of a character
+     * @return strength of a character
+     */
     public double getStrength(){return strength;}
 
-    public double getInteligence(){return inteligence;}
+    /**
+     * Gets the intelligence of a character
+     * @return intelligence of a character
+     */
+    public double getIntelligence(){return intelligence;}
 
+    /**
+     * Gets the intelligence of a character
+     * @return agility of a character
+     */
     public double getAgility(){return agility;}
 
+    /**
+     * Sets the name of a character
+     * @param name The name of the character
+     */
     public void setName(String name){this.name = name;}
 
-    public void setStrength(int strength){this.strength = strength;}
+    /**
+     * Sets the strength of a character
+     * @param strength The strength of a character
+     */
+    public void setStrength(double strength){this.strength = strength;}
 
-    public void setInteligence(int inteligence){this.inteligence = inteligence;}
+    /**
+     * Sets the intelligence of a character
+     * @param intelligence The intelligence of a character
+     */
+    public void setIntelligence(double intelligence){this.intelligence = intelligence;}
 
-    public void setAgility(int agility){this.agility = agility;}
+    /**
+     * Sets the agility of a character
+     * @param agility The agility of a character
+     */
+    public void setAgility(double agility){this.agility = agility;}
 
     
-    /** 
-     * @param state
+    /**
+     * used to print the stats before and after the level up
+     * @param state String that shows is the stats are before or after the level up
      */
-    //auxiliary function to print stats before and after levelling up
     protected void printStats(String state){
         System.out.println("-------- " + state + " -------");
         System.out.println("|Name: " + name);
         System.out.println("|Experience: " + experience);
         System.out.println("|Strength: " + strength);
         System.out.println("|Agility: " + agility);
-        System.out.println("|Inteligence: " + inteligence);
+        System.out.println("|Intelligence: " + intelligence);
         System.out.println("------------------------------------");
 
     }
 
-    //method to level up a character, each type of character levels up in a diferent way
-    protected void levelUp(){
-    }
+    /**
+     * Method used in subclasses to level up each one of them with different rules
+     */
+    protected abstract void levelUp();
 
-    
     /** 
-     * @param toString(
+     * method to check if a mercenary has an arch, a warrior has armour and a mage "sementes de abóbora"
      * @return boolean
      */
-    //method to check if a mercenary has an arch, a warrior has armour and a mage "sementes de abóbora"
-    protected boolean hasAtribute(){return false;}
-    
+    protected abstract boolean hasAtribute();
 
-    //toString method for every character
+
+    /**
+     * Prints the character
+     * @return a String with the formatted print
+     */
     @Override
     public String toString(){
         return "The character " + name + " has a level of experience of " + experience;
