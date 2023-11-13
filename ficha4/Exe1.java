@@ -8,6 +8,10 @@ class Data{
         this.mes = mes;
         this.ano = ano;
     }
+    
+    /** 
+     * @return String
+     */
     public String toString(){
         String[] meses = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"}; 
         String txt =  String.join(" de ", Integer.toString(dia), meses[mes - 1], Integer.toString(ano));

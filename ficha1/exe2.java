@@ -2,6 +2,10 @@ import java.util.*;
 
 
 public class exe2 {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         int n = 0;
         int sum = 0;

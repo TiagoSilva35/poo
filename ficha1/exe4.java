@@ -1,5 +1,9 @@
 
 public class exe4 {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         int n = 101;
         int c = 1;

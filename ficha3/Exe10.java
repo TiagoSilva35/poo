@@ -1,6 +1,12 @@
 import java.util.Scanner;
 
 public class Exe10 {
+    
+    /** 
+     * @param word
+     * @param dicWord
+     * @return boolean
+     */
     public static boolean hasTwoMoreLetters(String word,String dicWord){
         return dicWord.length() - word.length() <= 2 ? true : false;
     }

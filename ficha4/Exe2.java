@@ -8,6 +8,10 @@ class Angulo{
    public Angulo(double graus){
       this.graus = graus;
    }
+   
+   /** 
+    * @param graus
+    */
    public void setGraus(double graus){
       this.graus = graus;
    }

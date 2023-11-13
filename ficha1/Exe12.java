@@ -1,4 +1,8 @@
 public class Exe12 {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         for (int i = 100; i <= 1000; i += 100) {
             System.out.printf("lg(%d) = %d\n",i,lb(i));

@@ -1,6 +1,10 @@
 import java.util.*;
 
 public class exe10 {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         int n;
         Scanner sc = new Scanner(System.in);

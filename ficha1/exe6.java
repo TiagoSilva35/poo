@@ -1,6 +1,10 @@
 import java.lang.Math;
 
 public class exe6 {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         int n = 999;
         for(int i = 100; i <= n; i++){

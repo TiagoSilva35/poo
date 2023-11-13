@@ -1,4 +1,9 @@
 public class Exe13 {
+    
+    /** 
+     * @param a
+     * @return int
+     */
     private static int digits(int a){
         if (a == 0)return 1; 
         int c = 0;

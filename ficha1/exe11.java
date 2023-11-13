@@ -1,5 +1,9 @@
 
 public class exe11 {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         int n = 5,m = 2;
         int x = mdc(n,m);

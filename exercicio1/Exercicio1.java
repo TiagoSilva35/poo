@@ -1,4 +1,9 @@
 public class Exercicio1 {
+    
+    /** 
+     * @param quantidades
+     * @param paises
+     */
     //Just prints the result,checks for duplicates in 'paises' 
     private static void imprimeResultado(int[] quantidades, String[][] paises){
         boolean[] paisesVisitados = new boolean[paises.length];     //Keeps track of every country

@@ -104,6 +104,10 @@ abstract class Character{
 
     }
 
+    
+    /** 
+     * @param toString(
+     */
     /**
      * Method used in subclasses to level up each one of them with different rules
      */

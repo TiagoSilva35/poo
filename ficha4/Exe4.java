@@ -12,6 +12,12 @@ class Fracao{
     public int getNumerador(){return numerador;}
     public int getDenominador(){return denominador;}
 
+    
+    /** 
+     * @param a
+     * @param b
+     * @return int
+     */
     private int mdc (int a, int b){
         if (a == 0) return b;
         if (b == 0) return a;

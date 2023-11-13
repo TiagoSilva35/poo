@@ -19,7 +19,11 @@ class Disciplina{
     public int getNotaRecurso(){return NotaRecurso;}
     public int getNotaEspecial(){return NotaEspecial;}
 
-    public int melhorNota(){
+    
+    /** 
+     * @return int
+     */
+    wpublic int melhorNota(){
         return Math.max(Math.max(NotaNormal, NotaEspecial), NotaRecurso);
     }
     public String toString(){

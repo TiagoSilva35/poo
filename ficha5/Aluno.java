@@ -9,6 +9,10 @@ class Aluno extends Pessoa{
     public void setNumeroAluno(int numeroAluno){this.numeroAluno = numeroAluno;}
     public int getNumeroAluno(){return numeroAluno;}
 
+    
+    /** 
+     * @return String
+     */
     public String missao(){
         return "aprender";
     }

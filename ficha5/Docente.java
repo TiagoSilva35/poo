@@ -5,6 +5,10 @@ class Docente extends Pessoa {
         super(nome);
         this.numeroMecanográfico = numeroMecanográfico;
     }
+    
+    /** 
+     * @return String
+     */
     public String missao(){
         return "ensinar";
     }

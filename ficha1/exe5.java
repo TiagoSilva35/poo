@@ -2,6 +2,10 @@
 //import java.lang.Math;
 
 public class exe5 {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         int n1 = 220;
         int n2 = 284;

@@ -2,6 +2,10 @@ import java.lang.Math;
 import java.util.*;
 
 public class Exe1 {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         int[] ar;
         ar = new int[10];

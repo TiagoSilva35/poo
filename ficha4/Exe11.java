@@ -1,4 +1,8 @@
 public class Exe11 {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         ManageContacts contact_manager = new ManageContacts();
         contact_manager.addContact(); 

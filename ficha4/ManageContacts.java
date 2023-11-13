@@ -51,6 +51,11 @@ class ManageContacts{
         searchContact(friendsContacts, name);
         searchContact(professionalContacts, name);
     }
+    
+    /** 
+     * @param list
+     * @param wantedName
+     */
     private void searchContact (List<Contact> list, String wantedName){
         String confirm = new String();
         Scanner sc =  new Scanner(System.in);

@@ -1,4 +1,9 @@
 public class Exe1{
+    
+    /** 
+     * @param word
+     * @return boolean
+     */
     public static boolean palindromo(String word){
         boolean ans = false;
         for (int i = 0; i < word.length()/2; i++) {

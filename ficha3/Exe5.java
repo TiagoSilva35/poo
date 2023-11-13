@@ -1,6 +1,12 @@
 import java.util.Scanner;
 
 public class Exe5 {
+    
+    /** 
+     * @param sentence
+     * @param word
+     * @return int
+     */
     public static int compare(String sentence, String word){
         int times = 0;
         for (String i : sentence.split(" ")) {

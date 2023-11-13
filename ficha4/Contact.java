@@ -9,6 +9,10 @@ class Contact {
         this.age = age;
         this.phoneNumber = phoneNumber;
     }
+    
+    /** 
+     * @return String
+     */
     public String getName(){
         return name;
     }

@@ -1,4 +1,9 @@
 public class Extra {
+    
+    /** 
+     * @param receipt
+     * @param len
+     */
     private static void print(String[][] receipt, int len){
         int totalVal = 0;
         int counter = 0;
